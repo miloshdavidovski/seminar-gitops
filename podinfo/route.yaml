@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: podinfo
+  labels:
+    app: podinfo
+spec:
+  to:
+    kind: Service
+    name: podinfo
+  port:
+    targetPort: http
